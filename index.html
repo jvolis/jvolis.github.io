@@ -6,13 +6,28 @@
 
 <body>
 <h1>Ready to ayy lmao?</h1>
-<input type="text">
+<input type="text" id="input_field">
 <button type="button" onclick="myFunction() ">ayy lmao</button>
 <p id="lmao"> </p>
 
 <script>
+function reverse(s) {
+  return s.split('').reverse().join('');
+}
+function ayyLmao(string) {
+  var horizontal = string.toUpperCase();
+  var vertical = "";
+  for (var i = 1;i< string.length() - 1;i++) {
+    vertical = vertical+horizontal[i];
+    for(var j = 0; j <string.length() - 2;j++){
+      vertical = vertical+" ";
+    };
+    vertical = vertical+horizontal[-i]+"\n";
+  };
+  return horizontal + '\n' +vertical+ reverse(horizontal);
+};
 function myFunction() { 
-    document.getElementById("lmao").innerHTML = "Hello JavaScript!";
+    document.getElementById("lmao").innerHTML = ayyLmao(document.getElementById("input_field"));
 }
 </script>
 
