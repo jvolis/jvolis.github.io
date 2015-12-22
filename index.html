@@ -7,14 +7,14 @@
 <body>
 <h1>Ready to ayy lmao?</h1>
 <input type="text" id="input_field">
-<button type="button" onclick="myFunction() ">ayy lmao</button>
+<button type="button" onclick="myFunction()">ayy lmao</button>
 <p id="lmao"> </p>
 
 <script>
-function reverse(s) {
+var reverse = function(s) {
   return s.split('').reverse().join('');
 }
-function ayyLmao(string) {
+var ayyLmao =  function(string) {
   var horizontal = string.toUpperCase();
   var vertical = "";
   for (var i = 1;i< string.length() - 1;i++) {
