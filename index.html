@@ -21,7 +21,7 @@ var ayyLmao =  function(string) {
     for(var j = 0; j <string.length - 2;j++){
       vertical = vertical+" ";
     };
-    vertical = vertical+string.charAt(-i)+'<br>';
+    vertical = vertical+string.charAt(-(i))+'<br>';
   };
   return string + '<br>' +vertical+ reverse(string);
 };
