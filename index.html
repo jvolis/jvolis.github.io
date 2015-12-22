@@ -45,6 +45,7 @@ $(document).ready(function(){
   $("#input_field").keypress(function(event) {
     if(event.which === 13){
       $("#submit-button").click();
+      $("#input_field").value = "";
     }
   });
 });
