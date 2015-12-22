@@ -1,1 +1,57 @@
+<!DOCTYPE=html>
+<html>
+<head>
+  <title>Make dank words yo</title>
+  <style>
+    body {
+      font-family: Lucida Console;
+    }
+  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
 
+<body>
+<h1>Ready to ayy lmao?</h1>
+<input type="text" id="input_field">
+<button id="submit-button" type="button" onclick="myFunction()">ayy lmao</button>
+<p id="lmao"> </p>
+
+<script>
+var reverse = function(s) {
+  return s.toString().split('').reverse().join('');
+};
+var ayyLmao =  function(string) {
+  string = string.toUpperCase();
+  var vertical = "";
+  for (var i = 1;i< string.length - 1;i++) {
+    if(string.charAt(i) == ' '){
+      vertical = vertical+"&nbsp;";
+    }
+    else{
+    vertical = vertical+string.charAt(i);
+    }
+    for(var j = 0; j <string.length - 2;j++){
+      vertical = vertical+"&nbsp;";
+    };
+    vertical = vertical+string.charAt(string.length-i-1)+'<br>';
+  };
+  return string + '<br>' +vertical+ reverse(string);
+};
+function myFunction() { 
+    var input = document.getElementById("input_field").value;
+    document.getElementById("lmao").innerHTML = ayyLmao(input);
+    $("#input_field").val("");
+}
+
+$(document).ready(function(){
+  $("#input_field").keypress(function(event) {
+    if(event.which === 13){
+      $("#submit-button").click();
+      $("#input_field").val("");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
