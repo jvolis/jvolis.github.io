@@ -7,12 +7,13 @@
       font-family: Lucida Console;
     }
   </style>
+  <script src="jquery-1.11.3.min.js"></script>
 </head>
 
 <body>
 <h1>Ready to ayy lmao?</h1>
 <input type="text" id="input_field">
-<button type="button" onclick="myFunction()">ayy lmao</button>
+<button id="submit-button" type="button" onclick="myFunction()">ayy lmao</button>
 <p id="lmao"> </p>
 
 <script>
@@ -39,6 +40,16 @@ function myFunction() {
     var input = document.getElementById("input_field").value;
     document.getElementById("lmao").innerHTML = ayyLmao(input);
 }
+
+var main = function() {
+  $(document).keypress(function(event) {
+    if(event.which === 13){
+      $(".submit-button").click();
+    }
+  });
+};
+
+$(document).ready(main);
 </script>
 
 </body>
