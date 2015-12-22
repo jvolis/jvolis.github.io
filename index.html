@@ -41,13 +41,13 @@ function myFunction() {
     document.getElementById("lmao").innerHTML = ayyLmao(input);
 }
 
-var main = function() {
-  $(document).keypress(function(event) {
+$(document).ready(function(){
+  $(".input_field").keypress(function(event) {
     if(event.which === 13){
       $(".submit-button").click();
     }
   });
-};
+});
 
 $(document).ready(main);
 </script>
