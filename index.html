@@ -15,7 +15,6 @@ var reverse = function(s) {
   return s.split('').reverse().join('');
 };
 var ayyLmao =  function(string) {
-  var horizontal = string.toUpperCase();
   var vertical = "";
   for (var i = 1;i< string.length() - 1;i++) {
     vertical = vertical+horizontal[i];
@@ -24,7 +23,7 @@ var ayyLmao =  function(string) {
     };
     vertical = vertical+horizontal[-i]+"\n";
   };
-  return horizontal + '\n' +vertical+ reverse(horizontal);
+  return string + '\n' +vertical+ reverse(string);
 };
 function myFunction() { 
     document.getElementById("lmao").innerHTML = ayyLmao(document.getElementById("input_field"));
