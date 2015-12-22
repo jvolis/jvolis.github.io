@@ -17,11 +17,11 @@ var reverse = function(s) {
 var ayyLmao =  function(string) {
   var vertical = "";
   for (var i = 1;i< string.length - 1;i++) {
-    vertical = vertical+string[i];
+    vertical = vertical+string.charAt(i);
     for(var j = 0; j <string.length - 2;j++){
       vertical = vertical+" ";
     };
-    vertical = vertical+string[-i]+'<br>';
+    vertical = vertical+string.charAt(-i)+'<br>';
   };
   return string + '<br>' +vertical+ reverse(string);
 };
